@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{07aec862-c5fc-4ca6-bb29-c1254e76cdbe}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>config.py</StartupFile>
+    <StartupFile>manage.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
