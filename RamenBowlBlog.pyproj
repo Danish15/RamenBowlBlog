@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07aec862-c5fc-4ca6-bb29-c1254e76cdbe}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>config.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\static\favicon.ico" />
+    <Content Include="app\templates\404.html" />
+    <Content Include="app\templates\500.html" />
+    <Content Include="app\templates\base.html" />
+    <Content Include="app\templates\index.html" />
+    <Content Include="app\templates\mail\new_user.html" />
+    <Content Include="app\templates\mail\new_user.txt" />
+    <Content Include="migrations\alembic.ini" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\email.py" />
+    <Compile Include="app\main\errors.py" />
+    <Compile Include="app\main\forms.py" />
+    <Compile Include="app\main\views.py" />
+    <Compile Include="app\main\__init__.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="config.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="migrations\env.py" />
+    <Compile Include="migrations\versions\38c4e85512a9_initial_migration.py" />
+    <Compile Include="tests\test.py" />
+    <Compile Include="tests\test_basics.py" />
+    <Compile Include="tests\test_user_model.py" />
+    <Compile Include="tests\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\main" />
+    <Folder Include="app\static" />
+    <Folder Include="app\templates" />
+    <Folder Include="app\templates\mail" />
+    <Folder Include="migrations" />
+    <Folder Include="migrations\versions" />
+    <Folder Include="tests" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
